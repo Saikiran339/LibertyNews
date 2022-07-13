@@ -18,6 +18,7 @@ function Drawer() {
   let reactSwipeEl;
   return (
     <div>
+      <Container>
       <Container style={{display:"contents"}}>
         <Box sx={{ height: "50vh" }}>
           <Grid item xs={6}>
@@ -79,6 +80,7 @@ function Drawer() {
             <h1>Hello World</h1>
           </Grid> */}
         </Box>
+      </Container>
       </Container>
     </div>
   );

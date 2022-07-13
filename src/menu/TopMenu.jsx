@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import HomeIcon from '@mui/icons-material/Home';
-import { Button } from '@mui/material';
+import { Button, Container } from '@mui/material';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -21,7 +21,7 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function TopMenu() {
   return (
 
-
+<Container>
     <Paper style={{backgroundColor: 'blue'}} square>
       <HomeIcon style={{color: 'white', paddingTop: '5px'}}/>
       &nbsp;&nbsp;&nbsp;
@@ -31,6 +31,7 @@ export default function TopMenu() {
       &nbsp;
       <Button style={{color: 'white'}}>జాతీయం</Button>
     </Paper>
+    </Container>
   
     // <Box sx={{ flexGrow: 1 }}>
     //   <Grid container spacing={2}>

@@ -9,6 +9,8 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import { Container } from '@mui/material';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import NewsCards from './NewsCard.css';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -19,53 +21,166 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
+const handleClick = () => {
+  console.log('Hello')
+}
+
 function NewsCard() {
   return (
   <Container>
+    <h3>తాజా వార్తల</h3>
     <Grid container spacing={2} >
-        <Grid item xs={4} style={{display: "inline"}}>
+    <Grid item xs={4} style={{display: "inline"}}>
           <Item style={{display:"contents"}}>
+          <Button>
+            
           <Card sx={{ maxWidth: 345 }}>
-            <CardMedia
+            <CardMedia            
               component="img"
               height="200"
-              image="https://www.libertynewstelugu.com/assets/images/news/Street_Food_KTR.jpg"
+              image="https://www.libertynewstelugu.com/assets/images/news/SOCIETY_copy.jpg"
               alt="green iguana"
             />
-            <CardContent>
+            <Button onClick={handleClick()} style={{left:"143px",top:"-225px"}}><h5 style={{backgroundColor:"black", color:"white"}}>తెలంగాణ</h5></Button>
+            <CardContent style={{paddingTop:"1px"}}>
               <Typography gutterBottom variant="h6" component="div">
-              అమెరికాలో స్ట్రీట్ ఫుడ్ తిన్న మంత్రి కేటీఆర్
-              <h6>26 March 2022 08:34 PM</h6>
+              రైతులు సొసైటీ సేవలు సద్వినియోగం చేసుకోవాలి : కొత్వాల
+
+              <Grid container spacing={1} columns={16}>
+                <Grid item xs={9}>
+                  <Item style={{display:"contents"}}><h5>05 July 2022 03:30 PM</h5></Item>
+                </Grid>
+                
+                <Grid item xs={7}>
+                  <Item style={{display:"contents"}}>&nbsp;&nbsp;&nbsp;<VisibilityIcon fontSize="small"/>&nbsp;100</Item>
+                </Grid>
+              </Grid>
+
+
+              {/* <div className='time_view'>
+              <h6>05 July 2022 03:30 PM  &nbsp; <VisibilityIcon fontSize="small" style={{color:"red"}} /> </h6> 
+              
+              </div> */}
+             
               </Typography>
               <Typography variant="body2" color="text.secondary">
-              లిబర్టీ న్యూస్ : దళితబంధు లబ్ధిదారుల గ్రౌండింగ్ ప్రక్రియ సోమవారం వరకు పూర�
+              లిబర్టీ న్యూస్ : భద్రాద్రి కొత్తగూడెం జిల్లా, పాల్వంచ కో- ఆపరేటివ్ సొసైటీ ద�
               </Typography>
             </CardContent>
-            <CardActions>
+            {/* <CardActions>
               <Button size="small">Share</Button>
               <Button size="small">Learn More</Button>
-            </CardActions>
+            </CardActions> */}
             </Card>
+            </Button>
+          </Item>
+        </Grid>
+        <Grid item xs={4} style={{display: "inline"}}>
+          <Item style={{display:"contents"}}>
+          <Button>
+            
+          <Card sx={{ maxWidth: 345 }}>
+            <CardMedia            
+              component="img"
+              height="200"
+              image="https://www.libertynewstelugu.com/assets/images/news/NEW_SP.jpg"
+              alt="green iguana"
+            />
+            <Button style={{left:"143px",top:"-225px"}}><h5 style={{backgroundColor:"black", color:"white"}}>తెలంగాణ</h5></Button>
+            <CardContent style={{paddingTop:"1px"}}>
+              <Typography gutterBottom variant="h6" component="div">
+              భద్రాద్రి జిల్లా ఎస్పీగా బాధ్యతలు చేపట్టిన డాక్టర్ జి.వినీత్
+
+              <Grid container spacing={1} columns={16}>
+                <Grid item xs={9}>
+                  <Item style={{display:"contents"}}><h5>04 July 2022 07:33 PM</h5></Item>
+                </Grid>
+                
+                <Grid item xs={7}>
+                  <Item style={{display:"contents"}}>&nbsp;&nbsp;&nbsp;<VisibilityIcon fontSize="small" />&nbsp;100</Item>
+                </Grid>
+              </Grid>
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+              లిబర్టీ న్యూస్ : భద్రాద్రి కొత్తగూడెం జిల్లా సూపరింటెండెంట్ ఆఫ్ పోలీస్
+              </Typography>
+            </CardContent>
+            {/* <CardActions>
+              <Button size="small">Share</Button>
+              <Button size="small">Learn More</Button>
+            </CardActions> */}
+            </Card>
+            </Button>
           </Item>
         </Grid>
         
 
         <Grid item xs={4}>
           <Item style={{display:"contents"}}>
+            <Button>
           <Card sx={{ maxWidth: 345 }}>
             <CardMedia
               component="img"
               height="200"
-              image="https://www.libertynewstelugu.com/assets/images/news/COLLECTOR___DALIT_BANDHU_copy.jpg"
+              image="https://www.libertynewstelugu.com/assets/images/news/kkkkkk.jpg"
+              alt="green iguana"
+            />
+            <Button style={{left:"143px",bottom:"224px"}}><h5 style={{backgroundColor:"black", color:"white"}}>తెలంగాణ</h5></Button>
+            <CardContent>
+              <Typography gutterBottom variant="h6" component="div">
+              వీధి వ్యాపారులకు అండగా ఉంటాం: ముత్యాల విశ్వనాథం
+
+              <Grid container spacing={1} columns={16}>
+                <Grid item xs={9}>
+                  <Item style={{display:"contents"}}><h5>04 July 2022 07:08 PM</h5></Item>
+                </Grid>
+                
+                <Grid item xs={7}>
+                  <Item style={{display:"contents"}}>&nbsp;&nbsp;&nbsp;<VisibilityIcon fontSize="small" />&nbsp;100</Item>
+                </Grid>
+              </Grid>
+              
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+              లిబర్టీ న్యూస్ : భద్రాద్రి కొత్తగూడెం జిల్లా పాల్వంచ పట్టణంలో గత 30, 40 ఏళ్లగా
+              </Typography>
+            </CardContent>
+            {/* <CardActions>
+              <Button size="small">Share</Button>
+              <Button size="small">Learn More</Button>
+            </CardActions> */}
+            </Card>
+            </Button>
+          </Item>
+        </Grid>
+
+
+        <Grid item xs={4}>
+          <Item style={{display:"contents"}}>
+          <Card sx={{ maxWidth: 345 }}>
+            <CardMedia
+              component="img"
+              height="200"
+              image="https://www.libertynewstelugu.com/assets/images/news/Peddammaaa.jpg"
               alt="green iguana"
             />
             <CardContent>
               <Typography gutterBottom variant="h6" component="div">
-              దళితబంధు లబ్ధిదారుల గ్రౌండింగ్ ప్రక్రియ పూర్తి చేయాలి: కలెక్టర్
-              <h6>26 March 2022 09:00 PM</h6>
+              పెద్దమ్మతల్లికి ఘనంగా పంచామృతాభిషేకం
+
+              <Grid container spacing={1} columns={16}>
+                <Grid item xs={9}>
+                  <Item style={{display:"contents"}}><h5>04 July 2022 07:08 PM</h5></Item>
+                </Grid>
+                
+                <Grid item xs={7}>
+                  <Item style={{display:"contents"}}>&nbsp;&nbsp;&nbsp;<VisibilityIcon fontSize="small" />&nbsp;100</Item>
+                </Grid>
+              </Grid>
+              <h6>01 July 2022 02:12 PM</h6>
               </Typography>
               <Typography variant="body2" color="text.secondary">
-              లిబర్టీ న్యూస్ : దళితబంధు లబ్ధిదారుల గ్రౌండింగ్ ప్రక్రియ సోమవారం వరకు పూర�
+              లిబర్టీ న్యూస్ : భద్రాద్రి కొత్తగూడెం జిల్లా పాల్వంచ మండల పరిధిలోని కేశ
               </Typography>
             </CardContent>
             <CardActions>
@@ -77,33 +192,6 @@ function NewsCard() {
         </Grid>
 
 
-        <Grid item xs={4}>
-          <Item style={{display:"contents"}}>
-          <Card sx={{ maxWidth: 345 }}>
-            <CardMedia
-              component="img"
-              height="200"
-              image="https://www.libertynewstelugu.com/assets/images/news/TEACHER.jpg"
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h6" component="div">
-              టీచర్ పై అత్యాచారం
-              <h6>24 March 2022 11:33 AM</h6>
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-              లిబర్టీ న్యూస్ : విద్యాబుద్ధులు నేర్పించి విద్యార్థులను అగ్రభాగాన నిలిపే
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small">Share</Button>
-              <Button size="small">Learn More</Button>
-            </CardActions>
-            </Card>
-          </Item>
-        </Grid>
-
-
         <br />
         <br />
         <br />
@@ -113,16 +201,26 @@ function NewsCard() {
             <CardMedia
               component="img"
               height="200"
-              image="https://www.libertynewstelugu.com/assets/images/news/Banks_-_Bundh_copy.jpg"
+              image="https://www.libertynewstelugu.com/assets/images/news/ZPGSS_copy.jpg"
               alt="green iguana"
             />
             <CardContent>
               <Typography gutterBottom variant="h6" component="div">
-              4 రోజులు బ్యాంకులు బంద్
-              <h6>26 March 2022 08:58 AM</h6>
+              పాల్వంచ జిల్లా పరిషత్ బాలికల పాఠశాల విద్యార్థుల విజయదుందుభి
+
+              <Grid container spacing={1} columns={16}>
+                <Grid item xs={9}>
+                  <Item style={{display:"contents"}}><h5>04 July 2022 07:08 PM</h5></Item>
+                </Grid>
+                
+                <Grid item xs={7}>
+                  <Item style={{display:"contents"}}>&nbsp;&nbsp;&nbsp;<VisibilityIcon fontSize="small" />&nbsp;100</Item>
+                </Grid>
+              </Grid>
+              <h6>01 July 2022 01:33 PM</h6>
               </Typography>
               <Typography variant="body2" color="text.secondary">
-              లిబర్టీ న్యూస్ : రేపటి నుంచి వరుసగా 4 రోజులు బ్యాంకులు బంద్ కానున్నాయి. మార్�
+              లిబర్టీ న్యూస్ : భద్రాద్రి కొత్తగూడెం జిల్లా, పాల్వంచ కేటీపీఎస్ కాలనీలో
               </Typography>
             </CardContent>
             <CardActions>
@@ -146,6 +244,16 @@ function NewsCard() {
             <CardContent>
               <Typography gutterBottom variant="h6" component="div">
               మరదలి పై కన్నేసిన బావ
+
+              <Grid container spacing={1} columns={16}>
+                <Grid item xs={9}>
+                  <Item style={{display:"contents"}}><h5>04 July 2022 07:08 PM</h5></Item>
+                </Grid>
+                
+                <Grid item xs={7}>
+                  <Item style={{display:"contents"}}>&nbsp;&nbsp;&nbsp;<VisibilityIcon fontSize="small" />&nbsp;100</Item>
+                </Grid>
+              </Grid>
               <h6>26 March 2022 08:33 AM</h6>
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -173,6 +281,16 @@ function NewsCard() {
             <CardContent>
               <Typography gutterBottom variant="h6" component="div">
               వైరాలో కోళ్ల దొంగ
+
+              <Grid container spacing={1} columns={16}>
+                <Grid item xs={9}>
+                  <Item style={{display:"contents"}}><h5>04 July 2022 07:08 PM</h5></Item>
+                </Grid>
+                
+                <Grid item xs={7}>
+                  <Item style={{display:"contents"}}>&nbsp;&nbsp;&nbsp;<VisibilityIcon fontSize="small" />&nbsp;100</Item>
+                </Grid>
+              </Grid>
               <h6>23 March 2022 08:53 AM</h6>
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -200,6 +318,16 @@ function NewsCard() {
             <CardContent>
               <Typography gutterBottom variant="h6" component="div">
               పాల్వంచ ఆశ్రమ పాఠశాల హెడ్ మాస్టర్ పై చర్యలు తీసుకోవాలి
+
+              <Grid container spacing={1} columns={16}>
+                <Grid item xs={9}>
+                  <Item style={{display:"contents"}}><h5>04 July 2022 07:08 PM</h5></Item>
+                </Grid>
+                
+                <Grid item xs={7}>
+                  <Item style={{display:"contents"}}>&nbsp;&nbsp;&nbsp;<VisibilityIcon fontSize="small" />&nbsp;100</Item>
+                </Grid>
+              </Grid>
               <h6>22 March 2022 12:24 PM</h6>
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -228,6 +356,16 @@ function NewsCard() {
             <CardContent>
               <Typography gutterBottom variant="h6" component="div">
               బూర్గంపాడులో మద్యం సిండికేట్ దందా
+
+              <Grid container spacing={1} columns={16}>
+                <Grid item xs={9}>
+                  <Item style={{display:"contents"}}><h5>04 July 2022 07:08 PM</h5></Item>
+                </Grid>
+                
+                <Grid item xs={7}>
+                  <Item style={{display:"contents"}}>&nbsp;&nbsp;&nbsp;<VisibilityIcon fontSize="small" />&nbsp;100</Item>
+                </Grid>
+              </Grid>
               <h6>21 March 2022 05:42 PM</h6>
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -254,6 +392,16 @@ function NewsCard() {
             <CardContent>
               <Typography gutterBottom variant="h6" component="div">
               మల్లు స్వరాజ్యం ఇక లేరు
+
+              <Grid container spacing={1} columns={16}>
+                <Grid item xs={9}>
+                  <Item style={{display:"contents"}}><h5>04 July 2022 07:08 PM</h5></Item>
+                </Grid>
+                
+                <Grid item xs={7}>
+                  <Item style={{display:"contents"}}>&nbsp;&nbsp;&nbsp;<VisibilityIcon fontSize="small" />&nbsp;100</Item>
+                </Grid>
+              </Grid>
               <h6>19 March 2022 08:28 PM</h6>
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -280,6 +428,16 @@ function NewsCard() {
             <CardContent>
               <Typography gutterBottom variant="h6" component="div">
               భక్తులు మెచ్చేలా నవమి ఏర్పాట్లు ఉండాలి : కలెక్టర్
+
+              <Grid container spacing={1} columns={16}>
+                <Grid item xs={9}>
+                  <Item style={{display:"contents"}}><h5>04 July 2022 07:08 PM</h5></Item>
+                </Grid>
+                
+                <Grid item xs={7}>
+                  <Item style={{display:"contents"}}>&nbsp;&nbsp;&nbsp;<VisibilityIcon fontSize="small" />&nbsp;100</Item>
+                </Grid>
+              </Grid>
               <h6>19 March 2022 07:29 PM</h6>
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -306,6 +464,16 @@ function NewsCard() {
             <CardContent>
               <Typography gutterBottom variant="h6" component="div">
               ఎండల పట్ల అప్రమత్తంగా ఉండాలి : కలెక్టర్
+
+              <Grid container spacing={1} columns={16}>
+                <Grid item xs={9}>
+                  <Item style={{display:"contents"}}><h5>04 July 2022 07:08 PM</h5></Item>
+                </Grid>
+                
+                <Grid item xs={7}>
+                  <Item style={{display:"contents"}}>&nbsp;&nbsp;&nbsp;<VisibilityIcon fontSize="small" />&nbsp;100</Item>
+                </Grid>
+              </Grid>
               <h6>19 March 2022 06:53 PM</h6>
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -332,6 +500,16 @@ function NewsCard() {
             <CardContent>
               <Typography gutterBottom variant="h6" component="div">
               ఘనంగా శ్రీ బాలాజీ కల్యాణోత్సవం
+
+              <Grid container spacing={1} columns={16}>
+                <Grid item xs={9}>
+                  <Item style={{display:"contents"}}><h5>04 July 2022 07:08 PM</h5></Item>
+                </Grid>
+                
+                <Grid item xs={7}>
+                  <Item style={{display:"contents"}}>&nbsp;&nbsp;&nbsp;<VisibilityIcon fontSize="small" />&nbsp;100</Item>
+                </Grid>
+              </Grid>
               <h6>19 March 2022 08:33 AM</h6>
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -358,6 +536,16 @@ function NewsCard() {
             <CardContent>
               <Typography gutterBottom variant="h6" component="div">
               వరకట్నం వేధింపులకు వివాహిత బలి
+
+              <Grid container spacing={1} columns={16}>
+                <Grid item xs={9}>
+                  <Item style={{display:"contents"}}><h5>04 July 2022 07:08 PM</h5></Item>
+                </Grid>
+                
+                <Grid item xs={7}>
+                  <Item style={{display:"contents"}}>&nbsp;&nbsp;&nbsp;<VisibilityIcon fontSize="small" />&nbsp;100</Item>
+                </Grid>
+              </Grid>
               <h6>18 March 2022 01:22 PM</h6>
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -384,6 +572,16 @@ function NewsCard() {
             <CardContent>
               <Typography gutterBottom variant="h6" component="div">
               పాల్వంచలో టీచర్ పై దాడి
+
+              <Grid container spacing={1} columns={16}>
+                <Grid item xs={9}>
+                  <Item style={{display:"contents"}}><h5>04 July 2022 07:08 PM</h5></Item>
+                </Grid>
+                
+                <Grid item xs={7}>
+                  <Item style={{display:"contents"}}>&nbsp;&nbsp;&nbsp;<VisibilityIcon fontSize="small" />&nbsp;100</Item>
+                </Grid>
+              </Grid>
               <h6>17 March 2022 08:26 PM</h6>
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -410,6 +608,16 @@ function NewsCard() {
             <CardContent>
               <Typography gutterBottom variant="h6" component="div">
               గరుడ సేవలో పాల్గొన్న కాళ్లూరి పవన్ బాబు దంపతులు
+
+              <Grid container spacing={1} columns={16}>
+                <Grid item xs={9}>
+                  <Item style={{display:"contents"}}><h5>04 July 2022 07:08 PM</h5></Item>
+                </Grid>
+                
+                <Grid item xs={7}>
+                  <Item style={{display:"contents"}}>&nbsp;&nbsp;&nbsp;<VisibilityIcon fontSize="small" />&nbsp;100</Item>
+                </Grid>
+              </Grid>
               <h6>17 March 2022 07:52 PM</h6>
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -437,6 +645,16 @@ function NewsCard() {
             <CardContent>
               <Typography gutterBottom variant="h6" component="div">
               హోలీ పండుగ శుభాకాంక్షలు తెలిపిన జిల్లా కలెక్టర్ అనుదీప్
+
+              <Grid container spacing={1} columns={16}>
+                <Grid item xs={9}>
+                  <Item style={{display:"contents"}}><h5>04 July 2022 07:08 PM</h5></Item>
+                </Grid>
+                
+                <Grid item xs={7}>
+                  <Item style={{display:"contents"}}>&nbsp;&nbsp;&nbsp;<VisibilityIcon fontSize="small" />&nbsp;100</Item>
+                </Grid>
+              </Grid>
               <h6>17 March 2022 09:12 PM</h6>
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -463,6 +681,16 @@ function NewsCard() {
             <CardContent>
               <Typography gutterBottom variant="h6" component="div">
               పోలీసులకు సవాల్ విసురుతున్న దొంగలు
+
+              <Grid container spacing={1} columns={16}>
+                <Grid item xs={9}>
+                  <Item style={{display:"contents"}}><h5>04 July 2022 07:08 PM</h5></Item>
+                </Grid>
+                
+                <Grid item xs={7}>
+                  <Item style={{display:"contents"}}>&nbsp;&nbsp;&nbsp;<VisibilityIcon fontSize="small" />&nbsp;100</Item>
+                </Grid>
+              </Grid>
               <h6>16 March 2022 09:09 PM</h6>
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -489,6 +717,16 @@ function NewsCard() {
             <CardContent>
               <Typography gutterBottom variant="h6" component="div">
               చరిత్ర సృష్టించిన భారత మహిళా క్రికెటర్ ఝులన్‌ గోస్వామి
+
+              <Grid container spacing={1} columns={16}>
+                <Grid item xs={9}>
+                  <Item style={{display:"contents"}}><h5>04 July 2022 07:08 PM</h5></Item>
+                </Grid>
+                
+                <Grid item xs={7}>
+                  <Item style={{display:"contents"}}>&nbsp;&nbsp;&nbsp;<VisibilityIcon fontSize="small" />&nbsp;100</Item>
+                </Grid>
+              </Grid>
               <h6>16 March 2022 08:03 PM</h6>
               </Typography>
               <Typography variant="body2" color="text.secondary">

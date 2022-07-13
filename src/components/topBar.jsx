@@ -8,6 +8,7 @@ import Date from './SocialIcons';
 import { FaFacebookF, FaTwitter, FaYoutube } from "react-icons/fa";
 import Button from '@mui/material/Button';
 import { color } from '@mui/system';
+import { Container } from '@mui/material';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -20,6 +21,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 function TopBar() {
   return (
+    <Container>
     <Box sx={{ flexGrow: 1 }} >
       <Grid container spacing={2} >
         <Grid item xs={8}>
@@ -36,6 +38,7 @@ function TopBar() {
         </Grid>
       </Grid>
     </Box>
+    </Container>
   );
 }
 

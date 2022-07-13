@@ -7,6 +7,7 @@ import Drawer from "./Slider/Swiper";
 import NewsCard from "./cards/NewsCard";
 import Practice from "./Slider/practice";
 import Swipe from "./Slider/Slider";
+import NewsDetail from "./cards/NewsDetail";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <br />
 
       <NewsCard />
+      <NewsDetail />
       {/* <Swipe /> */}
     </div>
   );
