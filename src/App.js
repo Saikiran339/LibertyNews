@@ -8,6 +8,7 @@ import NewsCard from "./cards/NewsCard";
 import Practice from "./Slider/practice";
 import Swipe from "./Slider/Slider";
 import NewsDetail from "./cards/NewsDetail";
+import { Route,BrowserRouter,Routes } from 'react-router-dom';
 
 function App() {
   return (
@@ -17,14 +18,18 @@ function App() {
       <NavBar />
       <TopMenu />
       <Drawer />
-      {/* <Practice />  */}
+      
       <br />
       <br />
       <br />
 
       <NewsCard />
-      <NewsDetail />
-      {/* <Swipe /> */}
+      {/* <NewsDetail /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<NewsDetail />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
