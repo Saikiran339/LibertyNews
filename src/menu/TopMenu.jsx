@@ -22,33 +22,17 @@ export default function TopMenu() {
   return (
 
 <Container>
-    <Paper style={{backgroundColor: 'blue'}} square>
-      <HomeIcon style={{color: 'white', paddingTop: '5px'}}/>
+    <Paper style={{backgroundColor: 'blue',}} square>
+      <HomeIcon style={{color: 'white', paddingTop: '5px', display:"inline"}}/>
       &nbsp;&nbsp;&nbsp;
       <Button style={{color: 'white', borderleft: "10px"}}>ఆంధ్రప్రదేశ్</Button>
       &nbsp;
       <Button style={{color: 'white'}}>తెలంగాణ</Button>
       &nbsp;
       <Button style={{color: 'white'}}>జాతీయం</Button>
+      &nbsp;
+      <Button style={{color: 'white'}}>వీడియోలు</Button>
     </Paper>
     </Container>
-  
-    // <Box sx={{ flexGrow: 1 }}>
-    //   <Grid container spacing={2}>
-    //     <Grid item xs={12}>
-    //       <Item>
-    //           <HomeIcon />
-    //           &nbsp;&nbsp;&nbsp;
-    //           <Button>ఆంధ్రప్రదేశ్</Button>
-    //           &nbsp;
-    //           <Button>తెలంగాణ</Button>
-    //           &nbsp;
-    //           <Button>జాతీయం</Button>
-                
-    //       </Item>
-    //     </Grid>
-        
-    //   </Grid>
-    // </Box>
   );
 }

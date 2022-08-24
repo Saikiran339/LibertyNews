@@ -16,12 +16,9 @@ import SmsIcon from "@mui/icons-material/Sms";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import AddIcon from "@mui/icons-material/Add";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+import NewsCardComponent from "./NewsCardComponent";
+import NewsCard from "./NewsCard";
+
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -43,9 +40,6 @@ function NewsDetail() {
         <TopMenu />
         <br />
 
-        {/* <Paper style={{backgroundColor: 'blue'}} square>
-            Hello
-        </Paper> */}
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
@@ -151,13 +145,11 @@ function NewsDetail() {
                   వెంకటేశ్వరరావు, చౌగాని పాపారావు, సొసైటీ సీఈఓ జి.లక్ష్మీనారాయణ,
                   సురేందర్ రెడ్డి తదితరులు పాల్గొన్నారు.
                 </h3>
-                {/* <h4>
-                  తెలంగాణ / లిబర్టీ న్యూస్ : భద్రాద్రి కొత్తగూడెం జిల్లా, పాల్వంచ కో- ఆపరేటివ్ సొసైటీ ద్వారా రైతులకు /n
-                  చేపడుతున్న సేవలను సద్వినియోగం చేసుకోవాలని పాల్వంచ సొసైటీ అధ్యక్షులు, డీసీఎంఎస్ వైస్ చైర్మన్ కొత్వాల
-                </h4> */}
+
                 <h1 style={{ textAlign: "justify" }}>
                   మరిన్ని వార్తలు
                   <hr></hr>
+                  <NewsCard />
                 </h1>
                 </Item>
                 </Grid>
