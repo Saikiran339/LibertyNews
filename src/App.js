@@ -21,6 +21,9 @@ function App() {
       <NavBar />
       <TopMenu />
       <Drawer />
+      <br />
+      <br />
+      <br />
         <Routes>
           <Route path="/" element={<NewsCard />} />
           <Route path="/NewsDetail" element={<NewsDetail />} />
