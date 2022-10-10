@@ -17,7 +17,6 @@ import TelegramIcon from "@mui/icons-material/Telegram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import AddIcon from "@mui/icons-material/Add";
 import NewsCardComponent from "./NewsCardComponent";
-import NewsCard from "./NewsCard";
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -28,17 +27,63 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
+
+const tData= [
+  {
+    img:"https://libertynewstelugu.com/assets/images/news/e-_papam_copy.jpg",
+    title:"ఈ పాపం ఎవరిది..?",
+    timeDate:"30 August 2022 04:38 PM",
+    views:"740",
+  },
+  {
+    img:"https://libertynewstelugu.com/assets/images/news/e-_papam_copy.jpg",
+    title:"ఈ పాపం ఎవరిది..?",
+    timeDate:"30 August 2022 04:38 PM",
+    views:"740",
+  },
+  {
+    img:"https://libertynewstelugu.com/assets/images/news/e-_papam_copy.jpg",
+    title:"ఈ పాపం ఎవరిది..?",
+    timeDate:"30 August 2022 04:38 PM",
+    views:"740",
+  },
+  {
+    img:"https://libertynewstelugu.com/assets/images/news/e-_papam_copy.jpg",
+    title:"ఈ పాపం ఎవరిది..?",
+    timeDate:"30 August 2022 04:38 PM",
+    views:"740",
+  },
+  {
+    img:"https://libertynewstelugu.com/assets/images/news/e-_papam_copy.jpg",
+    title:"ఈ పాపం ఎవరిది..?",
+    timeDate:"30 August 2022 04:38 PM",
+    views:"740",
+  },
+  {
+    img:"https://libertynewstelugu.com/assets/images/news/e-_papam_copy.jpg",
+    title:"ఈ పాపం ఎవరిది..?",
+    timeDate:"30 August 2022 04:38 PM",
+    views:"740",
+  },
+]
+
+const tData2 = [
+  {
+    img:"Society",
+    title:"రైతులు సొసైటీ సేవలు సద్వినియోగం చేసుకోవాలి : కొత్వాల",
+    description:" భద్రాద్రి కొత్తగూడెం జిల్లా, పాల్వంచ కో- ఆపరేటివ్ సొసైటీ ద్వారా రైతులకు చేపడుతున్న సేవలను సద్వినియోగం చేసుకోవాలని పాల్వంచ సొసైటీ అధ్యక్షులు, డీసీఎంఎస్ వైస్ చైర్మన్ కొత్వాల శ్రీనివాసరావు అన్నారు. మంగళవారం స్థానిక కాంట్రాక్టర్స్ కాలని(పున్నమ్మ స్కూల్) లోని సొసైటీ గోడౌన్ వద్ద రైతులకు ఎరువుల పంపిణీ కార్యక్రమాన్ని కొత్వాల ప్రారంభించారు. ఈ సందర్బంగా కొత్వాల మాట్లాడుతూ రైతులకు నిత్యం అందుబాటులో ఉంటూ వారికి సకాలంలో ఎమ్మార్పీ ధరలకే ఎరువులు, సబ్సిడీపై విత్తనాలురుణాలు పంపిణీ చేయడం జరుగుతున్నాదన్నారు. ధాన్యం కొనుగోలు కేంద్రాలు ఏర్పాటు చేసి ప్రభుత్వం మద్దతు ధరకు ధాన్యం సేకరణ జరుగుతుందన్నారు. సొసైటీ ద్వారా చేపడుతున్న సేవలను రైతులు సద్వినియోగం చేసుకోవాలని కొత్వాల కొరారు. ఈ కార్యక్రమంలో సొసైటీ వైస్ చైర్మన్ కాంపెల్లి కనకేష్, డైరెక్టర్లు బుడగం రామ్మోహన్ రావు, కనగాల నారాయణరావు, సామా జనార్దన్ రెడ్డి, మైనేని వెంకటేశ్వరరావు, చౌగాని పాపారావు, సొసైటీ సీఈఓ జి.లక్ష్మీనారాయణ, సురేందర్ రెడ్డి తదితరులు పాల్గొన్నారు.",
+    timeDate:"Date : 05 July 2022 03:30 PM",
+    views:"740",
+  }
+]
+
+
 function NewsDetail() {
   return (
     <div>
+     
       <Container>
-      <br />
-      <br />
-      <br />
-        <TopBar />
-        <NavBar />
-        <TopMenu />
-        <br />
+      
 
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
@@ -47,24 +92,24 @@ function NewsDetail() {
                 <h1 style={{ color: "red", textAlign: "left" }}>
                   రైతులు సొసైటీ సేవలు సద్వినియోగం చేసుకోవాలి : కొత్వాల
                 </h1>
-                <h3 style={{ textAlign: "left" }}>
+                <h3 style={{ display:"inline-flex",color:"red" }}>
                   Date : 05 July 2022 03:30 PM
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
                   Views :<VisibilityIcon fontSize="small" /> 78
                 </h3>
                 <div
@@ -75,52 +120,39 @@ function NewsDetail() {
                     alignItems: "right",
                   }}
                 >
-                  <IconButton
-                    style={{ backgroundColor: "blue", color: "white" }}
-                  >
+                  <IconButton style={{ backgroundColor: "blue", color: "white", float:"left" }}>
                     <AddIcon sx={{ fontSize: 40 }} />
                   </IconButton>
                   &nbsp;
-                  <IconButton
-                    style={{ backgroundColor: "blue", color: "white" }}
-                  >
+                  <IconButton style={{ backgroundColor: "blue", color: "white", float:"left" }}>
                     <FacebookIcon sx={{ fontSize: 40 }} />
                   </IconButton>
                   &nbsp;
-                  <IconButton
-                    style={{ backgroundColor: "skyBlue", color: "white" }}
-                  >
+                  <IconButton style={{ backgroundColor: "skyBlue", color: "white", float:"left" }}>
                     <TwitterIcon sx={{ fontSize: 40 }} />
                   </IconButton>
                   &nbsp;
-                  <IconButton
-                    style={{ backgroundColor: "green", color: "white" }}
-                  >
+                  <IconButton style={{ backgroundColor: "green", color: "white", float:"left" }}>
                     <WhatsAppIcon sx={{ fontSize: 40 }} />
                   </IconButton>
                   &nbsp;
-                  <IconButton
-                    style={{ backgroundColor: "lightGreen", color: "white" }}
-                  >
+                  <IconButton style={{ backgroundColor: "lightGreen", color: "white", float:"left" }}>
                     <SmsIcon sx={{ fontSize: 40 }} />
                   </IconButton>
                   &nbsp;
-                  <IconButton
-                    style={{ backgroundColor: "skyBlue", color: "white" }}
-                  >
+                  <IconButton style={{ backgroundColor: "skyBlue", color: "white", float:"left" }}>
                     <TelegramIcon sx={{ fontSize: 40 }} />
                   </IconButton>
                   &nbsp;
-                  <IconButton
-                    style={{ backgroundColor: "blue", color: "white" }}
-                  >
+                  <IconButton style={{ backgroundColor: "blue", color: "white", float:"left" }}>
                     <LinkedInIcon sx={{ fontSize: 40 }} />
                   </IconButton>
-                  &nbsp;
-                  <br />
-                  <br />
-                  <br />
+                  &nbsp;  
+                  
                 </div>
+                <br />
+                  <br />
+                  <br />
                 <img src={Society} style={{ width: "1000px" }} />
 
                 <h3 style={{ textAlign: "justify" }}>
@@ -128,7 +160,7 @@ function NewsDetail() {
                     {" "}
                     తెలంగాణ / లిబర్టీ న్యూస్ :
                   </strong>
-                  భద్రాద్రి కొత్తగూడెం జిల్లా, పాల్వంచ కో- ఆపరేటివ్ సొసైటీ
+                  భద్రాద్రి కొత్తగూడెం జిల్లా, పాల్వంచ కో- ఆపరేటివ్ సొసైటీ <br></br>
                   ద్వారా రైతులకు చేపడుతున్న సేవలను సద్వినియోగం చేసుకోవాలని
                   పాల్వంచ సొసైటీ అధ్యక్షులు, డీసీఎంఎస్ వైస్ చైర్మన్ కొత్వాల
                   శ్రీనివాసరావు అన్నారు. మంగళవారం స్థానిక కాంట్రాక్టర్స్
@@ -146,17 +178,31 @@ function NewsDetail() {
                   సురేందర్ రెడ్డి తదితరులు పాల్గొన్నారు.
                 </h3>
 
-                <h1 style={{ textAlign: "justify" }}>
-                  మరిన్ని వార్తలు
-                  <hr></hr>
-                  <NewsCard />
-                </h1>
                 </Item>
                 </Grid>
-          </Grid>
-        </Box>
-      </Container>
-    </div>
+
+          <Container>
+    <h3>మరిన్ని వార్తలు</h3>
+    <hr></hr>
+
+    <br/>
+    <Grid container spacing={2} >
+
+{
+  tData.map(NewsDetail => {
+    return (
+      <div>
+        <NewsCardComponent title={NewsDetail.title} img={NewsDetail.img} timeDate={NewsDetail.timeDate} views={NewsDetail.views} />
+      </div>
+    );
+  })
+}
+    </Grid>
+  </Container>
+  </Grid>
+  </Box>
+  </Container>
+  </div>
   );
 }
 

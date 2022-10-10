@@ -6,6 +6,7 @@ import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import NewsDetail from "./NewsDetail";
+import { useNavigate } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -15,21 +16,23 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
   }));
   
-  const handleClick = () => {
-    console.log('Hello')
-  }
+ 
 
 
 function NewsCardComponent (props) {
+    const navigate = useNavigate ();
     const[data, ] = useState();
 
+    
+    const handleClick = () => {
+        navigate("/NewsDetail");
+      }
 
-    console.log(data);
+
     return (
         <div>
             <Grid item xs={4} style={{display: "inline"}}>
                 <Item style={{display:"contents"}}>
-                    <Button>
                     <Card sx={{ maxWidth: 350, maxHeight: 500 }}>
                     <img src={props.img} />
                     <h2>{props.title}</h2>
@@ -37,9 +40,8 @@ function NewsCardComponent (props) {
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;<VisibilityIcon fontSize="small"/>{props.views}</h4>
                     <p>{props.description}</p>
-                    <Button onClick={handleClick()} style={{left:"143px",top:"-400px"}}><h5 style={{backgroundColor:"black", color:"white"}}>తెలంగాణ</h5></Button>
-                    </Card>
-                    </Button>
+                    <Button onClick={handleClick} style={{left:"143px",top:"-400px"}}><h5 style={{backgroundColor:"black", color:"white"}}>తెలంగాణ</h5></Button>
+                    </Card> 
                 </Item>
             </Grid>
         </div>

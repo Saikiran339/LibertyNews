@@ -30,7 +30,7 @@ function TopBar() {
         </Grid>
         <br/>
         <Grid item xs={4}>
-          <Item style={{display:"contents"}}>
+          <Item style={{display:"contents", }}>
             <Button><FaFacebookF style={{color:"black"}}/>&nbsp;&nbsp;&nbsp;</Button>
             <Button><FaTwitter style={{color:"black"}}/>&nbsp;&nbsp;&nbsp;</Button>
             <Button><FaYoutube style={{color:"black"}}/></Button>
