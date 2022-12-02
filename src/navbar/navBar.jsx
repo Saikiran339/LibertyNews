@@ -5,6 +5,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { Container } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
+import logo from "../assets/logo.jpg";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -24,7 +25,7 @@ function NavBar () {
         {Array.from(Array(1)).map((_, index) => (
           <Grid item xs={2} sm={4} md={4} key={index} >
             <Item style={{display:"contents"}}>
-              <img src="https://libertynewstelugu.com/assets/images/common/logo.png"  height="70%" />
+              <img src={logo}  height="70%" />
           </Item>
           </Grid>
         ))}
