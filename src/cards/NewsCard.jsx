@@ -2,44 +2,45 @@ import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import { Container } from '@mui/material';
 import NewsCardComponent from './NewsCardComponent';
+import Drawer from "../Slider/Swiper";
 
 
 const tData= [
-  {
-    img:"https://www.libertynewstelugu.com/assets/images/news/SOCIETY_copy.jpg",
-    title:"రైతులు సొసైటీ సేవలు సద్వినియోగం చేసుకోవాలి : కొత్వాల",
-    description:"లిబర్టీ న్యూస్ : భద్రాద్రి కొత్తగూడెం జిల్లా, పాల్వంచ కో- ఆపరేటివ్ సొసైటీ ద�",
-    timeDate:"05 July 2022 03:30 PM",
-    views:"100",
-  },
-  {
-    img:"https://www.libertynewstelugu.com/assets/images/news/NEW_SP.jpg",
-    title:"భద్రాద్రి జిల్లా ఎస్పీగా బాధ్యతలు చేపట్టిన డాక్టర్ జి.వినీత్",
-    description:"లిబర్టీ న్యూస్ : భద్రాద్రి కొత్తగూడెం జిల్లా సూపరింటెండెంట్ ఆఫ్ పోలీస్",
-    timeDate:"04 July 2022 07:33 PM",
-    views:"100",
-  },
-  {
-    img:"https://www.libertynewstelugu.com/assets/images/news/kkkkkk.jpg",
-    title:"వీధి వ్యాపారులకు అండగా ఉంటాం: ముత్యాల విశ్వనాథం",
-    description:"లిబర్టీ న్యూస్ : భద్రాద్రి కొత్తగూడెం జిల్లా పాల్వంచ పట్టణంలో గత 30, 40 ఏళ్లగా",
-    timeDate:"04 July 2022 07:08 PM",
-    views:"100",
-  },
-  {
-    img:"https://www.libertynewstelugu.com/assets/images/news/Peddammaaa.jpg",
-    title:"పెద్దమ్మతల్లికి ఘనంగా పంచామృతాభిషేకం",
-    description:"లిబర్టీ న్యూస్ : భద్రాద్రి కొత్తగూడెం జిల్లా పాల్వంచ మండల పరిధిలోని కేశ",
-    timeDate:"01 July 2022 02:12 PM",
-    views:"100",
-  },
-  {
-    img:"https://www.libertynewstelugu.com/assets/images/news/ZPGSS_copy.jpg",
-    title:"పాల్వంచ జిల్లా పరిషత్ బాలికల పాఠశాల విద్యార్థుల విజయదుందుభి",
-    description:"లిబర్టీ న్యూస్ : భద్రాద్రి కొత్తగూడెం జిల్లా, పాల్వంచ కేటీపీఎస్ కాలనీలో",
-    timeDate:"01 July 2022 01:33 PM",
-    views:"100",
-  },
+  // {
+  //   img:"https://www.libertynewstelugu.com/assets/images/news/SOCIETY_copy.jpg",
+  //   title:"రైతులు సొసైటీ సేవలు సద్వినియోగం చేసుకోవాలి : కొత్వాల",
+  //   description:"లిబర్టీ న్యూస్ : భద్రాద్రి కొత్తగూడెం జిల్లా, పాల్వంచ కో- ఆపరేటివ్ సొసైటీ ద�",
+  //   timeDate:"05 July 2022 03:30 PM",
+  //   views:"100",
+  // },
+  // {
+  //   img:"https://www.libertynewstelugu.com/assets/images/news/NEW_SP.jpg",
+  //   title:"భద్రాద్రి జిల్లా ఎస్పీగా బాధ్యతలు చేపట్టిన డాక్టర్ జి.వినీత్",
+  //   description:"లిబర్టీ న్యూస్ : భద్రాద్రి కొత్తగూడెం జిల్లా సూపరింటెండెంట్ ఆఫ్ పోలీస్",
+  //   timeDate:"04 July 2022 07:33 PM",
+  //   views:"100",
+  // },
+  // {
+  //   img:"https://www.libertynewstelugu.com/assets/images/news/kkkkkk.jpg",
+  //   title:"వీధి వ్యాపారులకు అండగా ఉంటాం: ముత్యాల విశ్వనాథం",
+  //   description:"లిబర్టీ న్యూస్ : భద్రాద్రి కొత్తగూడెం జిల్లా పాల్వంచ పట్టణంలో గత 30, 40 ఏళ్లగా",
+  //   timeDate:"04 July 2022 07:08 PM",
+  //   views:"100",
+  // },
+  // {
+  //   img:"https://www.libertynewstelugu.com/assets/images/news/Peddammaaa.jpg",
+  //   title:"పెద్దమ్మతల్లికి ఘనంగా పంచామృతాభిషేకం",
+  //   description:"లిబర్టీ న్యూస్ : భద్రాద్రి కొత్తగూడెం జిల్లా పాల్వంచ మండల పరిధిలోని కేశ",
+  //   timeDate:"01 July 2022 02:12 PM",
+  //   views:"100",
+  // },
+  // {
+  //   img:"https://www.libertynewstelugu.com/assets/images/news/ZPGSS_copy.jpg",
+  //   title:"పాల్వంచ జిల్లా పరిషత్ బాలికల పాఠశాల విద్యార్థుల విజయదుందుభి",
+  //   description:"లిబర్టీ న్యూస్ : భద్రాద్రి కొత్తగూడెం జిల్లా, పాల్వంచ కేటీపీఎస్ కాలనీలో",
+  //   timeDate:"01 July 2022 01:33 PM",
+  //   views:"100",
+  // },
   {
     img:"https://www.libertynewstelugu.com/assets/images/news/MARADALU.jpg",
     title:"మరదలి పై కన్నేసిన బావ",
@@ -261,12 +262,14 @@ const tData= [
 
 function NewsCard() {
   return (
+    
   <Container>
+    {/* <Drawer /> */}
     <h3>తాజా వార్తల</h3>
     <hr></hr>
 
     <br/>
-    <Grid container spacing={2} >
+    <Grid  spacing={2} >
                     
 
 {/* News Cards */}
@@ -275,9 +278,7 @@ function NewsCard() {
 {
   tData.map(NewsCard => {
     return (
-      <div>
         <NewsCardComponent title={NewsCard.title} description={NewsCard.description} img={NewsCard.img} timeDate={NewsCard.timeDate} views={NewsCard.views} />
-      </div>
     );
   })
 }

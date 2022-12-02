@@ -30,10 +30,9 @@ function NewsCardComponent (props) {
 
 
     return (
-        <div>
-            <Grid item xs={4} style={{display: "inline"}}>
+            <Grid item xs={12} sm={6} md={4} style={{display: "inline"}}>
                 <Item style={{display:"contents"}}>
-                    <Card sx={{ maxWidth: 350, maxHeight: 500 }}>
+                    <Card sx={{ maxHeight: 500 }}>
                     <img src={props.img} />
                     <h2>{props.title}</h2>
                     <h4  style={{display:"inline-flex",color:"red"}}>{props.timeDate} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -44,7 +43,6 @@ function NewsCardComponent (props) {
                     </Card> 
                 </Item>
             </Grid>
-        </div>
     )
 }
 

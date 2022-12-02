@@ -1,38 +1,79 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
-import HomeIcon from '@mui/icons-material/Home';
-import { Button, Container } from '@mui/material';
-
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
-
-
-
+import * as React from "react";
+import Grid from "@mui/material/Grid";
+import HomeIcon from "@mui/icons-material/Home";
+import { Button, Container } from "@mui/material";
+import Divider from "@mui/material/Divider";
 
 export default function TopMenu() {
   return (
-
-<Container>
-    <Paper style={{backgroundColor: 'blue',}} square>
-      <HomeIcon style={{color: 'white', paddingTop: '5px', display:"inline"}}/>
-      &nbsp;&nbsp;&nbsp;
-      <Button style={{color: 'white', borderleft: "10px"}}>ఆంధ్రప్రదేశ్</Button>
-      &nbsp;
-      <Button style={{color: 'white'}}>తెలంగాణ</Button>
-      &nbsp;
-      <Button style={{color: 'white'}}>జాతీయం</Button>
-      &nbsp;
-      <Button style={{color: 'white'}}>వీడియోలు</Button>
-    </Paper>
+    <Container
+      style={{ backgroundColor: "blue", textAlign: "justify", height: "50px" }}
+    >
+      <Grid
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          width: "fit-content",
+          borderRadius: 1,
+          color: "white",
+          "& svg": {
+            m: 1.5,
+          },
+          "& hr": {
+            mx: 0.5,
+          },
+        }}
+      >
+        <Divider
+          orientation="vertical"
+          // variant="middle"
+          flexItem
+          color="white"
+        />
+        <HomeIcon style={{ marginTop: "10px", color: "yellow" }} />
+        <Divider
+          orientation="vertical"
+          // variant="middle"
+          flexItem
+          color="white"
+        />
+        <Button style={{ color: "yellow", marginTop: "6px", fontSize: "18px" }}>
+          <b>ఆంధ్రప్రదేశ్</b>
+        </Button>
+        <Divider
+          orientation="vertical"
+          // variant="middle"
+          flexItem
+          color="white"
+        />
+        <Button style={{ color: "yellow", marginTop: "6px", fontSize: "18px" }}>
+          <b>తెలంగాణ</b>
+          </Button>
+        <Divider
+          orientation="vertical"
+          // variant="middle"
+          flexItem
+          color="white"
+        />
+        <Button style={{ color: "yellow", marginTop: "6px", fontSize: "18px" }}>
+          <b>జాతీయం</b>
+          </Button>
+        <Divider
+          orientation="vertical"
+          // variant="middle"
+          flexItem
+          color="white"
+        />
+        <Button style={{ color: "yellow", marginTop: "6px", fontSize: "18px" }}>
+          <b>వీడియోలు</b>
+          </Button>
+        <Divider
+          orientation="vertical"
+          // variant="middle"
+          flexItem
+          color="white"
+        />
+      </Grid>
     </Container>
   );
 }

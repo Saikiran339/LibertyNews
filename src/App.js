@@ -7,33 +7,23 @@ import NewsCard from "./cards/NewsCard";
 import NewsDetail from "./cards/NewsDetail";
 import Telangana from "./cards/TelanganaCard";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { Divider } from "@mui/material";
 
 function App() {
   return (
-
-    
-    <div>
+    <>
       {/* <Telangana /> */}
        {/* <NewsDetail />  */}
       <BrowserRouter>
       <TopBar />
-
+      {/* <Divider /> */}
       <NavBar />
       <TopMenu />
-      <Drawer />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-        <Routes>
+      
+        {/* <Routes>
           <Route path="/" element={<NewsCard />} />
           <Route path="/NewsDetail" element={<NewsDetail />} />
-        </Routes>
+        </Routes> */}
       </BrowserRouter>
       {/* 
       <Drawer />
@@ -43,7 +33,7 @@ function App() {
       <br />
 
       <NewsCard /> */}
-    </div>
+    </>
   );
 }
 

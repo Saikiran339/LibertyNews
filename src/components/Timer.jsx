@@ -9,15 +9,10 @@ export const Timer = () => {
         return function cleanup() {
             clearInterval(timer)
         }
-    
     });
 
-    return(
-        <div>
-            <p> {date.toLocaleTimeString()} {date.toLocaleDateString()}</p>
-            
-
-        </div>
+    return (
+        <span> {date.toLocaleTimeString()} {date.toLocaleDateString()}</span>
     )
 }
 

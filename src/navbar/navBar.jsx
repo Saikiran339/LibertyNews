@@ -1,43 +1,37 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
+import React from "react";
+import { experimentalStyled as styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Container, Typography } from '@mui/material';
+import { Container } from "@mui/material";
+import MenuIcon from '@mui/icons-material/Menu';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
-  padding: theme.spacing(1),
+  padding: theme.spacing(2),
   textAlign: 'center',
   color: theme.palette.text.secondary,
 }));
 
-export default function NavBar() {
-  return (
-    <Container>
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
-        <Grid item xs={4}>
-            <Paper elevation="0">
-                <Typography>
-          <Item style={{display:"contents"}}>
-            <img style={{cursor: "pointer"}}
-            src="https://libertynewstelugu.com/assets/images/common/logo.png"
-            height='90%'
-            alt='logo'
-            display='content' />
 
+function NavBar () {
+  return (
+    <>
+    <Container>
+      {/* <MenuIcon></MenuIcon> */}
+      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+        {Array.from(Array(1)).map((_, index) => (
+          <Grid item xs={2} sm={4} md={4} key={index} >
+            <Item style={{display:"contents"}}>
+              <img src="https://libertynewstelugu.com/assets/images/common/logo.png"  height="70%" />
           </Item>
-          </Typography>
-          </Paper>
-        </Grid>
-        {/* <Grid item xs={8}>
-          <Item>xs=8</Item>
-        </Grid> */}
+          </Grid>
+        ))}
       </Grid>
-    </Box>
-    </Container>
-  );
+      </Container>
+    </>
+  )
 }
+
+export default NavBar;
